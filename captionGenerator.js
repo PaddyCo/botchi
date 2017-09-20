@@ -21,7 +21,7 @@ export const generateCaption = (text, tag, name, callback) => {
       convert ${image.path} \
       \\( \
         -background none \
-        -font Anime-Ace \
+        -font ${process.env.CAPTION_FONT_FAMILY} \
         -fill black \
         -size ${image.captionWidth}x${image.captionHeight} \
         -gravity center \
