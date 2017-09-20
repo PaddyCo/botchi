@@ -1,0 +1,66 @@
+[
+    {
+        "path": "assets/images/1.jpg",
+        "captionX": 77,
+        "captionY": 29,
+        "captionWidth": 134,
+        "captionHeight": 134,
+        "tags": ["scared2", "nervous"]
+    },
+    {
+        "path": "assets/images/crying1.jpg",
+        "captionX": 373,
+        "captionY": 64,
+        "captionWidth": 85,
+        "captionHeight": 222,
+        "tags": ["crying"]
+    },
+    {
+        "path": "assets/images/crying2.jpg",
+        "captionX": 359,
+        "captionY": 119,
+        "captionWidth": 61,
+        "captionHeight": 204,
+        "tags": ["crying", "sick"]
+    },
+    {
+        "path": "assets/images/excited1.jpg",
+        "captionX": 370,
+        "captionY": 60,
+        "captionWidth": 92,
+        "captionHeight": 230,
+        "tags": ["excited", "positive"]
+    },
+    {
+        "path": "assets/images/excited2.jpg",
+        "captionX": 32,
+        "captionY": 69,
+        "captionWidth": 89,
+        "captionHeight": 161,
+        "tags": ["excited", "positive"]
+    },
+    {
+        "path": "assets/images/happy1.jpg",
+        "captionX": 380,
+        "captionY": 439,
+        "captionWidth": 78,
+        "captionHeight": 166,
+        "tags": ["happy", "positive"]
+    },
+    {
+        "path": "assets/images/question1.jpg",
+        "captionX": 32,
+        "captionY": 158,
+        "captionWidth": 125,
+        "captionHeight": 141,
+        "tags": ["crying", "question", "thinking"]
+    },
+    {
+        "path": "assets/images/scared1.jpg",
+        "captionX": 365,
+        "captionY": 68,
+        "captionWidth": 103,
+        "captionHeight": 181,
+        "tags": ["scared", "nervous"]
+    }
+]
