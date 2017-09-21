@@ -18,7 +18,6 @@ class Twitter {
         this._getTweet(tweetId).then((result) => {
           if (result) {
             this._expandGalleries(msg, result);
-            this._expandGif(msg, result);
             this._expandQuote(msg, result);
           }
         });
@@ -32,31 +31,6 @@ class Twitter {
     const quotedId = tweet.data.quoted_status_id_str;
     if (quotedId) {
       msg.channel.send(`:arrow_right: Response to https://twitter.com/statuses/${quotedId}`)
-    }
-  }
-
-  _expandGif(msg, tweet) {
-    const media = tweet.data.extended_entities ? tweet.data.extended_entities.media : [];
-    if (media.length == 1 && media[0].type === "animated_gif") {
-      const tweetId = tweet.data.id_str;
-
-      // Fuck me up fam
-      const cmd = `
-          curl -0 ${media[0].video_info.variants[0].url} -o tmp/${tweetId}.mp4 && \
-          ffmpeg -i tmp/${tweetId}.mp4 -r 25 'tmp/${tweetId}-%03d.jpg' && \
-          rm tmp/${tweetId}.mp4 && \
-          convert -delay 4 -loop 0 tmp/${tweetId}*.jpg tmp/${tweetId}.gif && \
-          rm tmp/${tweetId}*.jpg
-      `;
-      exec(cmd, (error) => {
-        if (error) {
-          logger.log("error", `caption generation error: ${error}`);
-          return;
-        }
-
-        msg.channel.send({ files: [`tmp/${tweetId}.gif`] });
-        exec(`rm tmp/${tweetId}.gif`);
-      });
     }
   }
 
