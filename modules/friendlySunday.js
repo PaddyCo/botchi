@@ -42,14 +42,14 @@ class FriendlySunday {
   _sundayStart() {
     logger.log("info", "Friendly monday has started");
     for (const channel of this.channels) {
-      sendCaption(channel, "Friendly sunday has begun! Let's be nice!", "happy");
+      sendCaption(channel, "Friendly sunday is here!", "happy");
     }
   }
 
   _sundayEnd() {
-    logger.log("info", "Friendly sunday has ended!");
+    logger.log("info", "Friendly sunday has ended");
     for (const channel of this.channels) {
-      sendCaption(channel, "Friendly sunday has ended", "scared");
+      sendCaption(channel, "Friendly sunday is over", "crying");
     }
   }
 }
