@@ -5,7 +5,7 @@
         "captionY": 29,
         "captionWidth": 134,
         "captionHeight": 134,
-        "tags": ["scared2", "nervous"]
+        "tags": ["scared", "nervous"]
     },
     {
         "path": "assets/images/crying1.jpg",
@@ -101,7 +101,7 @@
         "captionY": 158,
         "captionWidth": 125,
         "captionHeight": 141,
-        "tags": ["crying", "question", "thinking"]
+        "tags": ["question", "thinking"]
     },
     {
         "path": "assets/images/scared1.jpg",
@@ -109,7 +109,7 @@
         "captionY": 68,
         "captionWidth": 103,
         "captionHeight": 181,
-        "tags": ["scared", "nervous"]
+        "tags": ["scared", "crying", "nervous"]
     },
     {
         "path": "assets/images/scared2.jpg",

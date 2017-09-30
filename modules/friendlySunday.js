@@ -38,20 +38,15 @@ class FriendlySunday {
       this.channels.push(msg.channel);
       sendCaption(msg.channel, `#${msg.channel.name} now observes friendly sunday!`, "excited");
     }
-
-    if (msg.content.indexOf("!friendlysunday") == 0) {
-      this._sundayStart();
-      this._sundayEnd();
-    }
   }
 
   _sundayStart() {
     logger.log("info", "Friendly monday has started");
     for (const channel of this.channels) {
       const start = [
-        "Friendly\\nsunday has begun!",
-        "Friendly\\nsunday is here!",
-        "Friendly\\nsunday is finally here!"
+        "Friendly\\nsunday\\nhas begun!",
+        "Friendly\\nsunday\\nis here!",
+        "Friendly\\nsunday\\nis finally here!"
       ];
 
       const end = [
@@ -66,12 +61,12 @@ class FriendlySunday {
   }
 
   _sundayEnd() {
-    logger.log("info", "Friendly sunday has ended!");
+    logger.log("info", "Friendly sunday has ended");
     for (const channel of this.channels) {
       const start = [
-        "Friendly\\nsunday has ended!",
-        "Friendly\\nsunday is over...",
-        "Friendly\\nsunday is already over"
+        "Friendly\\nsunday\\nhas ended!",
+        "Friendly\\nsunday\\nis over...",
+        "Friendly\\nsunday\\nis already over"
       ];
 
       const end = [
