@@ -24,6 +24,30 @@
         "tags": ["crying", "sick"]
     },
     {
+        "path": "assets/images/crying3.jpg",
+        "captionX": 26,
+        "captionY": 78,
+        "captionWidth": 120,
+        "captionHeight": 206,
+        "tags": ["crying", "scared"]
+    },
+    {
+        "path": "assets/images/crying4.jpg",
+        "captionX": 411,
+        "captionY": 44,
+        "captionWidth": 64,
+        "captionHeight": 134,
+        "tags": ["crying", "scared"]
+    },
+    {
+        "path": "assets/images/depressed1.jpg",
+        "captionX": 380,
+        "captionY": 53,
+        "captionWidth": 91,
+        "captionHeight": 233,
+        "tags": ["depressed", "scared"]
+    },
+    {
         "path": "assets/images/excited1.jpg",
         "captionX": 370,
         "captionY": 60,
@@ -48,6 +72,30 @@
         "tags": ["happy", "positive"]
     },
     {
+        "path": "assets/images/happy2.jpg",
+        "captionX": 407,
+        "captionY": 24,
+        "captionWidth": 91,
+        "captionHeight": 190,
+        "tags": ["happy", "positive"]
+    },
+    {
+        "path": "assets/images/happy3.jpg",
+        "captionX": 37,
+        "captionY": 45,
+        "captionWidth": 105,
+        "captionHeight": 269,
+        "tags": ["happy", "positive"]
+    },
+    {
+        "path": "assets/images/happy4.jpg",
+        "captionX": 59,
+        "captionY": 122,
+        "captionWidth": 65,
+        "captionHeight": 141,
+        "tags": ["happy", "positive"]
+    },
+    {
         "path": "assets/images/question1.jpg",
         "captionX": 32,
         "captionY": 158,
@@ -62,5 +110,21 @@
         "captionWidth": 103,
         "captionHeight": 181,
         "tags": ["scared", "nervous"]
+    },
+    {
+        "path": "assets/images/scared2.jpg",
+        "captionX": 379,
+        "captionY": 18,
+        "captionWidth": 105,
+        "captionHeight": 288,
+        "tags": ["scared"]
+    },
+    {
+        "path": "assets/images/triumph1.jpg",
+        "captionX": 402,
+        "captionY": 34,
+        "captionWidth": 65,
+        "captionHeight": 240,
+        "tags": ["triumph", "excited", "positive"]
     }
 ]

@@ -32,6 +32,7 @@ export const generateCaption = (text, tag, name, callback) => {
       -composite \
       tmp/${name}.jpg
     `;
+
   exec(cmd, (error) => {
     if (error) {
       logger.log("error", `caption generation error: ${error}`);

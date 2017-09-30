@@ -3,6 +3,7 @@ import { inspect } from "util";
 import { sendCaption } from "../captionGenerator";
 import cron from "node-cron";
 import sqlite3 from "sqlite3";
+import { sample } from "lodash";
 
 // Try to be nice in general, but make extra sure you are nice on friendly sunday!
 class FriendlySunday {
@@ -37,19 +38,47 @@ class FriendlySunday {
       this.channels.push(msg.channel);
       sendCaption(msg.channel, `#${msg.channel.name} now observes friendly sunday!`, "excited");
     }
+
+    if (msg.content.indexOf("!friendlysunday") == 0) {
+      this._sundayStart();
+      this._sundayEnd();
+    }
   }
 
   _sundayStart() {
     logger.log("info", "Friendly monday has started");
     for (const channel of this.channels) {
-      sendCaption(channel, "Friendly sunday has begun! Let's be nice!", "happy");
+      const start = [
+        "Friendly\\nsunday has begun!",
+        "Friendly\\nsunday is here!",
+        "Friendly\\nsunday is finally here!"
+      ];
+
+      const end = [
+        "",
+        "Let's be nice!",
+        "Let's be friends!",
+        "No more bullying!"
+      ];
+
+      sendCaption(channel, `${sample(start)}\\n${sample(end)}`, "positive");
     }
   }
 
   _sundayEnd() {
     logger.log("info", "Friendly sunday has ended!");
     for (const channel of this.channels) {
-      sendCaption(channel, "Friendly sunday has ended", "scared");
+      const start = [
+        "Friendly\\nsunday has ended!",
+        "Friendly\\nsunday is over...",
+        "Friendly\\nsunday is already over"
+      ];
+
+      const end = [
+        "",
+      ];
+
+      sendCaption(channel, `${sample(start)} ${sample(end)}`, "scared");
     }
   }
 }
