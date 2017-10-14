@@ -28,6 +28,7 @@ class Markov {
 
     client.on("message", (msg) => {
       const markovChain = this.markovChains[msg.channel.id];
+      this.db.run(`INSERT INTO messages (message, author_id, channel_id) VALUES ("${msg.cleanContent}", "${msg.author.id}", "${msg.channel.id}")`);
       if (markovChain) {
         markovChain.seed(msg.cleanContent);
       } else {
@@ -43,6 +44,8 @@ class Markov {
   initializeMarkovChain(channel) {
     logger.log("info", `Initializing markov chain for ${channel.name}`)
     this.markovChains[channel.id] = new markov(3);
+
+    this.markovChains[channel.id].seed("Hello friends!");
 
     this.db.each(`SELECT message FROM messages WHERE channel_id = "${channel.id}"`, (err, row) => {
       this.markovChains[channel.id].seed(row.message);
