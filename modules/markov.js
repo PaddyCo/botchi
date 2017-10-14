@@ -45,7 +45,7 @@ class Markov {
     logger.log("info", `Initializing markov chain for ${channel.name}`)
     this.markovChains[channel.id] = new markov(3);
 
-    this.markovChains[channel.id].seed("Hello friends!");
+    this.markovChains[channel.id].seed("Good morning my friends!");
 
     this.db.each(`SELECT message FROM messages WHERE channel_id = "${channel.id}"`, (err, row) => {
       this.markovChains[channel.id].seed(row.message);
